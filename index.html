@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Regex Form Validation</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <h1>User Form validation using RegEx</h1>
+                <form >
+                    <div class="form-group p-3">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control">
+                        <div class="invalid-feedback">
+                            <p>
+                                Name must be between 2 and 10 character, only letters
+                            </p> 
+                            <p>
+
+                                Regex used: ^[a-zA-Z]{2,10}$
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group p-3">
+                        <label for="zipcode">Zipcode</label>
+                        <input type="text" id="zipcode" class="form-control">
+                        <div class="invalid-feedback">
+                            <p>
+                                Zipcode must be 5 digits
+                            </p>
+                            <p>
+                                Regex Used: ^[0-9]{5}(-[0-9]{4})?$
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group p-3">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" class="form-control">
+                        <div class="invalid-feedback">
+                            <p>
+                                Email address is not valid. Please check
+
+                            </p>
+                            <p>
+                                Regex Used: ^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group p-3">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" class="form-control">
+                        <div class="invalid-feedback">
+                            <p>
+                                Phone number not valid
+                                
+
+                            </p>
+                        
+                            <p>
+                                Regex Used: ^([\+][0-9]{1,3})?[\-\s\.]?[(]?[0-9]{3}[)]?[\-\s\.]?[(]?[0-9]{3}[)]?[\-\s\.]?[(]?[0-9]{4}[)]?$
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group p-3 d-grid">
+
+                        <input type="submit" value="Submit" class="btn btn-primary">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
